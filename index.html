@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Local Weather Monitor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--fonts-->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Signika:b|Merriweather+Sans:b|Droid+Sans|Yellowtail|Karla&effect=ice">
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">        
+        <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons-wind.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+        <link rel="stylesheet" href="/l_w/css/weather.css"> 
+        <!--JS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtyEBydnsFZv6bPY4wGFN4ZBQcxdLmFgk&language=en&callback=myMap"></script><!--Google map API-->
+        <script src="/l_w/js/weather.js"></script>
+        
+    </head>
+    <body>
+        <h1 class="font-effect-ice">
+            Local Weather Monitor
+        </h1>
+        <div class="location">
+            <span id="city"></span><span class="comma"> , </span><span id="state"></span>
+        </div>
+        <div class="weather-box" >
+            <div class="weather col-lg-6 col-sm-12" >
+                <i class="wi" id="weather"></i>
+                <div id="weathertext">Sunny</div>
+            </div>
+            <div class="temp col-lg-6 col-sm-12">
+                <span id="templg"></span><i class="wi wi-celsius" id="unitlg"></i>
+                <a class="button" id="t-switch" target="_blank" title="Switch between Celsius and Fahrenheit"><span id="tempsm"></span><i class="wi wi-fahrenheit" id="unitsm"></i></a>
+                <br>                
+                <span id="hi-temp"></span><i class="wi wi-celsius" id="unit-r1"></i><span>/</span><span id="lo-temp"></span><i class="wi wi-celsius" id="unit-r2"></i>
+            </div>
+        </div>
+        <div class="mapframe">
+            <h3>Your Location:</h3>
+            <div id="map">              
+            </div>
+        </div>
+        <footer> 
+            <!--<div id="console">
+                dafa
+            </div>-->
+            <div>Created by <strong><a href="/home" style="text-decoration: none" target="_blank">QIAOCHU WANG</a></strong></div>
+        </footer>
+    </body>
+</html>
